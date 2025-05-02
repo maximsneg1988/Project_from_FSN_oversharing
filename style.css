@@ -1,0 +1,216 @@
+:root {
+  --border-color: #333333;
+  --text-color: #333333;
+}
+
+@font-face {
+  font-family: "PT-Root-UI_Regular";
+  src: url(fonts/PT-Root-UI_Regular.woff);
+}
+
+@font-face {
+  font-family: "PT-Root-UI_Medium";
+  src: url(fonts/PT-Root-UI_Medium.woff);
+}
+
+@font-face {
+  font-family: "PT-Root-UI_Bold";
+  src: url(fonts/PT-Root-UI_Bold.woff);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT-Root-UI_Medium", sans-serif;
+  background: #1e1e1e;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1720px;
+  margin: auto;
+  background-image: linear-gradient(to bottom, #f4f0e8 80%, #dbb09d 100%);
+  padding: 49px 39px 98px 41px;
+}
+
+h1,
+.greeting,
+.warning,
+.intro p,
+.warning p {
+  padding-left: 101px;
+}
+
+.bg-img {
+  background-image: url(img/bg-left.png), url(img/bg-top.png),
+    url(img/hacker-cracking-code.png), url(img/bg-bottom.png);
+  background-size: 680px 629px;
+  background-position: right 0 top 0, right -10px top 0, right 0 top 0,
+    right 0 bottom 75px;
+  background-repeat: no-repeat;
+  margin: -10px;
+}
+
+.bg-img::before {
+  content: "";
+  position: absolute;
+  top: 200px;
+  right: 230px;
+  background: #ead6c9;
+  filter: blur(80px);
+  z-index: 1;
+  height: 130px;
+  transform: rotate(70deg);
+  width: 300px;
+}
+
+.bg-img > * {
+  position: relative;
+  z-index: 2;
+}
+
+.intro h1 {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 97px;
+  margin-top: 0;
+  line-height: 90%;
+  letter-spacing: 0%;
+}
+
+.greeting {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.greeting-text1 {
+  margin-top: 0;
+}
+
+.greeting-text2 {
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+
+.warning {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 75px;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 56px;
+}
+
+.warning__p {
+  font-family: "PT-Root-UI_Medium", sans-serif;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+p {
+  font-size: 30px;
+}
+
+.data-info {
+  background-color: #f8f8f8;
+  border-radius: 40px;
+  padding: 60px 60px 9px 60px;
+  margin: 0 39px 60px 41px;
+}
+
+.data-info-list {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.data-info p {
+  margin-bottom: 0;
+}
+
+.data-info-p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+}
+
+.warning-img {
+  width: 240px;
+  height: 165px;
+  position: relative;
+  bottom: -110px;
+  right: -50px;
+}
+
+.how-to-play {
+  margin-bottom: 100px;
+  margin-top: 0;
+}
+
+.how-to-play h1 {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.how-to-play ul {
+  margin-top: 0;
+  margin-left: 103px;
+  font-family: "PT-Root-UI_Medium", sans-serif;
+  font-size: 36px;
+}
+
+.start-section {
+  text-align: center;
+  margin-top: 0;
+}
+
+.start-section > p {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.start-section-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-top: 0;
+}
+
+.start-invite {
+  font-size: 80px;
+  margin-bottom: 80px;
+  margin-top: 0;
+  font-size: "PT-Root-UI_Bold";
+}
+
+.start-button {
+  font-size: 80px;
+  background: linear-gradient(#f89061, #ffa57c);
+  font-weight: bold;
+  border: none;
+  padding: 60px 120px;
+  border-radius: 40px;
+  margin-top: 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.game-console1-img {
+  position: relative;
+  right: -140px;
+}
+
+.game-console2-img {
+  position: relative;
+  top: -70px;
+  left: -50px;
+}
+
+.start-button:hover {
+  background-color: #ff5520;
+}
