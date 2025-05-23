@@ -11,7 +11,7 @@
  
  
 
-	<body style="background-color: #bfd6b5;">
+	<body style="background-color: #bfd6b5">
 		<div class="container-out">
 	<div class="container page-profile">
 		<section class="container-frame">
@@ -161,68 +161,35 @@
 
 					<!-- Меню виджета 1-->
 					<nav class="widget-menu_nav">
-						<ul>
-							<li>
-								<a href="#">
-									<img src="./icons/person.svg" alt="Персона">
-									<span>Женщина</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="./icons/cake.svg" alt="День рожднеия">
-									<span>17 мая</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="./icons/location.svg" alt="Адресс">
-									<span>г. Казань</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="./icons/message.svg" alt="Почта">
-									<span>e-mail скрыт</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="./icons/call.svg" alt="Телефон">
-									<span>Номер телефона скрыт</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="./icons/lock.svg" alt="Семейное положение">
-									<span>Семейное положение: не указано</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="./icons/car.svg" alt="Автомобиль">
-									<span>Автомобиль: нет</span>
-								</a>
-							</li>
+						<ul id="about-list">
+							<li><img src="./icons/person.svg" alt="Персона"><span>Женщина</span></li>
+							<li><img src="./icons/cake.svg" alt="День рожднеия"><span>17 мая</span></li>
+							<li><img src="./icons/location.svg" alt="Адресс"><span>г. Казань</span></li>
+							<li><img src="./icons/message.svg" alt="Почта"><span>e-mail скрыт</span></li>
+							<li><img src="./icons/call.svg" alt="Телефон"><span>Номер телефона скрыт</span></li>
+							<li><img src="./icons/lock.svg" alt="Семейное положение"><span>Семейное положение: не указано</span></li>
+							<li><img src="./icons/car.svg" alt="Автомобиль"><span>Автомобиль: нет</span></li>
 						</ul>
 					</nav>
 				</div>
 
-				<!-- ВИДЖЕТ 2-->
-				<div class="widget widget-prompt">
-					<p><strong> Что нам нужно в этот раз:</strong></p>
-					<ul>
-						<li><span>Дата рождения</span></li>
-						<li><span>Адрес или город проживания</span></li>
-						<li><span>Телефон</span></li>
-						<li><span>Имя домашнего животного</span></li>
-						<li><span>Последнее место, где был пользователь</span></li>
-						<li><span>E-mail (если найдёшь)</span></li>
-					</ul>
+				<div class="sticky-parent">
+					<!-- ВИДЖЕТ 2-->
+					<div class="widget widget-prompt">
+						<p><strong> Что нам нужно в этот раз:</strong></p>
+						<ul id="check-list">
+							<li><span>Дата рождения</span></li>
+							<li><span>Адрес или город проживания</span></li>
+							<li><span>Телефон</span></li>
+							<li><span>Имя домашнего животного</span></li>
+							<li><span>Последнее место, где был пользователь</span></li>
+							<li><span>E-mail (если найдёшь)</span></li>
+						</ul>
 
-					<button class="btn btn-widget">
-						<span>Завершить уровень досрочно</span>
-					</button>
+						<button class="btn btn-widget" id="end-level">
+							<span>Завершить уровень досрочно</span>
+						</button>
+					</div>
 				</div>
 			</aside>
 
@@ -245,7 +212,7 @@
 					<div class="active panel" data-panel="3">
 						<div class="posts">
 							<!-- 3.1 -->
-							<article class="post">
+							<article class="post" id="1">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -273,9 +240,9 @@
 								</div>
 
 								<!-- Изображение в посте  -->
-								<a href="#" class="post-image">
+								<button class="post-image">
 									<img class="img-responsive" src="./images/post-1.png" alt="Изображение поста">
-								</a>
+								</button>
 
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
@@ -295,14 +262,14 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item">
-										 <a href="#" class="btn-comment"></a>		
+										<a href="#" class="btn-comment"></a>
 										<span>12</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.2 -->
-							<article class="post">
+							<article class="post" id="2">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -315,11 +282,10 @@
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
-
-                                            <a href="#" class="item_left">
+											<a href="#" class="item_left">
 												<h3>Дарина Белова</h3>
 												<small>15 часов назад</small>
-											</a>										
+											</a>
 
 											<div class="item-right">
 												<button data-id="more">
@@ -334,8 +300,7 @@
 								<div class="post-message">
 									<p>
 										<strong>Дарина Белова :</strong>
-										Сегодня 17 мая - день, когда я <br>
-										появилась на свет !
+										Сегодня 17 мая - день, когда я появилась на свет !
 									</p>
 								</div>
 
@@ -349,14 +314,14 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-                                        <a href="#" class="btn-comment"></a>										
+										<a href="#" class="btn-comment"></a>
 										<span>56</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.3 -->
-							<article class="post">
+							<article class="post" id="3">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -369,7 +334,6 @@
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
-                                            
 											<a href="#" class="item_left">
 												<h3>Дарина Белова</h3>
 												<small>1 день назад</small>
@@ -385,9 +349,9 @@
 								</div>
 
 								<!-- Изображение в посте  -->
-								<a href="#" class="post-image">
+								<button class="post-image">
 									<img class="img-responsive" src="./images/post-2.png" alt="Изображение поста 2">
-								</a>
+								</button>
 
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
@@ -407,14 +371,14 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										 <a href="#" class="btn-comment"></a>		
+										<a href="#" class="btn-comment"></a>
 										<span>20</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.4 -->
-							<article class="post">
+							<article class="post" id="4">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -445,8 +409,7 @@
 								<div class="post-message">
 									<p>
 										<strong>Дарина Белова :</strong>
-										Нужен хороший мастер по ремонту. <br>
-										Писать в личку или на +7 987 654-32-10
+										Нужен хороший мастер по ремонту. Писать в личку или на +7 987 654-32-10
 									</p>
 								</div>
 
@@ -460,14 +423,14 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										 <a href="#" class="btn-comment"></a>		
+										<a href="#" class="btn-comment"></a>
 										<span>25</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.5 -->
-							<article class="post">
+							<article class="post" id="5">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -495,9 +458,9 @@
 								</div>
 
 								<!-- Изображение в посте  -->
-								<a href="#" class="post-image">
+								<button class="post-image">
 									<img class="img-responsive" src="./images/post-3.png" alt="Изображение поста">
-								</a>
+								</button>
 
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
@@ -517,14 +480,14 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										 <a href="#" class="btn-comment"></a>		
+										<a href="#" class="btn-comment"></a>
 										<span>20</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.6 -->
-							<article class="post">
+							<article class="post" id="6">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -555,8 +518,7 @@
 								<div class="post-message">
 									<p>
 										<strong>Дарина Белова :</strong>
-										У меня один пароль на всё. Иначе я бы <br>
-										вообще нигде не входила.
+										У меня один пароль на всё. Иначе я бы вообще нигде не входила.
 									</p>
 								</div>
 
@@ -570,7 +532,7 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										 <a href="#" class="btn-comment"></a>		
+										<a href="#" class="btn-comment"></a>
 										<span>90</span>
 									</div>
 								</div>
@@ -588,13 +550,16 @@
 									<!-- 2 -->
 									<div class="post-comments_item">
 										<p><strong>Ответ:</strong></p>
-										<p><strong>Дарина Белова</strong> Пиши в телегу или на старую почту: masha.vetrov@oldmail.com</p>
+										<p>
+											<strong>Дарина Белова : </strong>Пиши в телегу или на старую почту: masha.vetrov@oldmail.com или
+											landcorobka@gmail.com
+										</p>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.7 -->
-							<article class="post">
+							<article class="post" id="7">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -639,14 +604,14 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										 <a href="#" class="btn-comment"></a>		
+										<a href="#" class="btn-comment"></a>
 										<span>20</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.8 -->
-							<article class="post">
+							<article class="post" id="8">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -674,9 +639,9 @@
 								</div>
 
 								<!-- Изображение в посте  -->
-								<a href="#" class="post-image">
+								<button class="post-image">
 									<img class="img-responsive" src="./images/post-4.png" alt="Изображение поста">
-								</a>
+								</button>
 
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
@@ -696,14 +661,14 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										 <a href="#" class="btn-comment"></a>		
+										<a href="#" class="btn-comment"></a>
 										<span>67</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.9 -->
-							<article class="post">
+							<article class="post" id="9">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
@@ -731,9 +696,9 @@
 								</div>
 
 								<!-- Изображение в посте  -->
-								<a href="#" class="post-image">
+								<button class="post-image">
 									<img class="img-responsive" src="./images/post-5.png" alt="Изображение поста">
-								</a>
+								</button>
 
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
@@ -753,7 +718,7 @@
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										 <a href="#" class="btn-comment"></a>		
+										<a href="#" class="btn-comment"></a>
 										<span>67</span>
 									</div>
 								</div>
@@ -767,7 +732,15 @@
 </div>
 
 
-	  <script src="./js/main.min.js"></script>
+		<!-- Кнопка вернуться наверх -->
+		<button id="back-to-top" title="Наверх">
+			<svg width="16" height="41" viewBox="0 0 16 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.70711 0.292892C8.31658 -0.0976333 7.68342 -0.0976334 7.2929 0.292892L0.928934 6.65685C0.538409 7.04738 0.538409 7.68054 0.928934 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM8 41L9 41L9 1L8 1L7 1L7 41L8 41Z" fill="#598552"/>
+			</svg>
+		</button>	
 
+		<script src="./static/button-to-back.js"></script>	
+
+		<script src="./static/level-1.js"></script>	
 	</body>
 </html>
